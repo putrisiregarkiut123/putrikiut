@@ -1,183 +1,254 @@
-Untuk mengubah warna background halaman web menjadi hijau, Anda perlu menambahkan aturan CSS untuk background color di tag `<body>`. Anda dapat melakukannya dengan menambahkan atribut `style` langsung ke tag `<body>` atau dengan menggunakan tag `<style>` di dalam `<head>`.
-
-Berikut adalah contoh modifikasi HTML Anda dengan penambahan warna background hijau menggunakan atribut `style` di tag `<body>`:
-
-```html
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Perpustakaan Putri Handayani Siregar</title>
+<title>Perpustakaan putri handayani siregar</title>
 </head>
-<body style="background-color: green;">
-    <font color="black">
-        <h1 style="color:black;"><center><b>PERPUSTAKAAN UNIVERSITAS JAMBI</b></center></h1>
-    </font>
-    <h2>Selamat Datang di Perpustakaan Universitas Jambi</h2>
-    <p style="color:black;">Perkenalkan, nama saya Putri Handayani Siregar NIM 222201019. Saya adalah mahasiswa D3 Perpustakaan Fakultas Vokasi Universitas Sumatera Utara. Berikut adalah
-    <i>homepage</i>
-    <b>pertama</b> saya, karena saya baru belajar tentang cara membuat <b><i><a href="https://www.library.unja.ac.id/">website Perpustakaan Universitas Jambi</a></i></b>.
-    </p>
-    <h3>Berikut ini adalah gambar dari gedung Perpustakaan Universitas Jambi</h3>
-    <center>
-        <img src="https://www.library.unja.ac.id/template/bootstrap_4/img/1.jpg" alt="Gedung Perpustakaan Universitas Jambi"/>
-    </center>
-    <p style="margin-bottom: 50px">
-    <h4>Berikut adalah Video Profil Perpustakaan Universitas Jambi</h4>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/R9KaksKc4Pw?si=hKrUYUQtpthYF8ZO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </p>
-    <p style="margin-bottom: 50px">
-    <h5>Berikut adalah lagu Di Akhir Perang - Nadin Amizah</h5>
-    <audio controls>
-        <source src="music/Nadin Amizah - Di Akhir Perang (Official Music Video).mp3" type="audio/mpeg">
-    </audio>
-    </p>
-    <p style="font-size: 20px; margin-bottom: 20px;"><font color="black"><b>Formulir Anggota Perpustakaan Program Studi Perpustakaan dan Sains Informasi</b></font></p>
-    <p style="margin-bottom: 50px">
-        <table border="1">
-            <tr align="center">
-                <td>Nama: </td>
-                <td><input type="text"/></td>
-            </tr>
-            <tr align="center">
-                <td>NIM:</td>
-                <td><input type="password"/></td>
-            </tr>
-            <tr align="center">
-                <td>Alamat:</td>
-                <td><input type="text"/></td>
-            </tr>
-            <tr align="center">
-                <td>Kota:</td>
-                <td>
-                    <label for="kota"></label>
-                    <select id="kota" name="kota">
-                        <option value="pilih kota">Pilih Kota</option>
-                        <option value="jakarta">Jakarta</option>
-                        <option value="bandung">Bandung</option>
-                        <option value="surabaya">Surabaya</option>
-                        <option value="yogyakarta">Yogyakarta</option>
-                        <option value="medan">Medan</option>
-                        <option value="banda aceh">Banda Aceh</option>
-                        <option value="bekasi">Bekasi</option>
-                    </select>
-                </td>
-            </tr>
-            <tr align="center">
-                <td>Jenis Kelamin:</td>
-                <td><input type="text"/></td>
-            </tr>
-            <tr align="center">
-                <td>Email: </td>
-                <td><input type="text"/></td>
-            </tr>
-            <tr align="center">
-                <td>No HP: </td>
-                <td><input type="number"/></td>
-            </tr>
-            <tr align="center">
-                <td>Tempat Lahir: </td>
-                <td><input type="text"/></td>
-            </tr>
-            <tr align="center">
-                <td>Tanggal Lahir: </td>
-                <td><input type="date"/></td>
-            </tr>
-            <tr align="center">
-                <td colspan="3" align="center">
-                    <button>REGISTER</button>
-                </td>
-            </tr>
-        </table>
-    </p>
-    <p style="font-size: 20px;"><font color="black"><b>Tabel Bahan Buku</b></font></p>
-    <table border="1" style="margin-bottom: 50px;">
-        <tr>
-            <th>No.</th>
-            <th>Judul Buku</th>
-            <th>Pengarang</th>
-            <th>Penerbit</th>
-            <th>Tahun Terbit</th>
-            <th>Jumlah Halaman</th>
-            <th>ISBN</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>"Berbagai Teknik Mengupload Web"</td>
-            <td>Jasmadi</td>
-            <td>ANDI Yogyakarta</td>
-            <td>2004</td>
-            <td>132</td>
-            <td>979-731-207-0</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>"Digital Numerical Relays"</td>
-            <td>Rao, T S Madhava</td>
-            <td>Mayfield Publishing Company</td>
-            <td>2005</td>
-            <td>227</td>
-            <td>0-07-058855-4</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>"The Rainbow and Women in Love"</td>
-            <td>Lawrence, D.H.; Clarko, Colin</td>
-            <td>Maclaren and Sons</td>
-            <td>1969</td>
-            <td>243</td>
-            <td>0-333-04929-2</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>"Mari Bung, Rebut Kembali"</td>
-            <td>Saleh, R.H.A.</td>
-            <td>Pustaka Rihlah</td>
-            <td>2000</td>
-            <td>272</td>
-            <td>979-416-667-7</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>"10 (Sepuluh) Menit Panduan Microsoft Exchange 5.0"</td>
-            <td>Warner, Scott</td>
-            <td>Elex Media Komputindo</td>
-            <td>1998</td>
-            <td>172</td>
-            <td>979-20-0354-1</td>
-        </tr>
-    </table>
-    <p style="font-size: 20px; margin-bottom: 20px;"><font color="black"><b>Formulir Pemesanan Buku</b></font></p>
-    <p style="margin-bottom: 50px;">
-        <table border="1">
-            <tr align="center">
-                <td>Nama Lengkap: </td>
-                <td><input type="text"/></td>
-            </tr>
-            <tr align="center">
-                <td>Nomor Anggota Perpustakaan:</td>
-                <td><input type="password"/></td>
-            </tr>
-            <tr align="center">
-                <td>Email:</td>
-                <td><input type="email" name="email" placeholder="@gmail.com" /></td>
-            </tr>
-            <tr align="center">
-                <td>Nomor Telepon:</td>
-                <td><input type="number" name="Nomor Telepon" placeholder="+62..." /></td>
-            </tr>
-            <tr align="center">
-                <td>Jenis Kelamin: </td>
-                <td>
-                    <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
-                    <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
-                </td>
-            </tr>
-            <tr align="center">
-                <th colspan="3" align="center">Detail Pemesanan</th>
-            </tr>
-            <tr align="center">
-                <td>Judul Buku Yang Di Pesan: </td>
-                <td><input type="text" name="Judul Buku"/></td>
-            </tr>
-            <tr align="center">
-                <td>
+<font color="black">
+<h1 style="color:black;"><center><b>PERPUSTAKAAN UNIVERSITAS JAMBI</center></h1></font></b></h1>
+<h-2>Selamat Datang di Perpustakaan Universitas Jambi</h2>
+<p style="color:black;">Perkenalkan, nama saya putri handayani siregar nim 222201019. Saya adalah mahasiswa D3 Perpustakaan Fakultas Vokasi Universitas Sumatera Utara. Berikut adalah
+<i>homepage</i>
+<b>pertama</b> saya, karena saya baru belajar tentang cara membuat <b><i><a href=https://www.library.unja.ac.id/> website Perpustakaan Univesrsitas Jambi</a></i></b>.
+<h-3>Berikut ini adalah gambar dari gedung Perpustakaan Universitas jambi</h3>
+</p>
+<h-4><center><img src="https://www.library.unja.ac.id/template/bootstrap_4/img/1.jpg" alt=/></h-4>
+<p style="margin-bottom: 50px">
+</p>
+<p><h-6>Berikut adalah Video Profil Perpustakaan Universitas Jambi</h6></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/R9KaksKc4Pw?si=hKrUYUQtpthYF8ZO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p style="margin-bottom: 50px">
+<p><h-7> Berikut adalah lagu Di akhir Perang-Nadin Amizah</h-7></p>
+<audio controls>
+<source src="music/Nadin Amizah - Di Akhir Perang (Official Music Video).mp3" alt="audio/mpeg">
+</audio>
+</p>
+<p style="margin-bottom: 50px"></p>
+<p style="font-size: 20px" style="margin-bottom: 20px"><font color="black"><b>Formulir Anggota Perpustakaan Program Studi Perpustakaan dan Sains Informasi</b></font></p>
+<p style="margin-bottom: 50px"><table border="1">
+    <tr align="center">
+    </tr>
+    <tr align="center">
+        <td>Nama: </td>
+        <td><input type="text"/></td>
+    </tr>
+    <tr align="center">
+        <td>NIM:</td>
+        <td><input type="password"/></td>
+    </tr>
+    <tr align="center">
+        <td>Alamat:</td>
+      <td><input type="text"/></td>
+    </tr>
+  <tr align="center">
+         <td>Kota:</td>
+        <td><label for="kota"></label>
+    <select id="kota" name="kota">
+        <option value="pilih kota">Pilih Kota</option>
+        <option value="jakarta">Jakarta</option>
+        <option value="bandung">Bandung</option>
+        <option value="surabaya">Surabaya</option>
+        <option value="yogyakarta">Yogyakarta</option>
+        <option value="medan">Medan</option>
+        <option value="banda aceh">Banda Aceh</option>
+        <option value="bekasi">Bekasi</option>
+    </select></td>
+    </tr>
+    <tr align="center">
+        <td>Jenis Kelamin:</td>
+        <td><input type="text"/></td>
+    </tr>
+    <tr align="center">
+        <td>Email: </td>
+        <td><input type="text"/></td>
+    </tr>
+    <tr align="center">
+        <td>No HP: </td>
+        <td><input type="number"/></td>
+    </tr>
+    <tr align="center">
+        <td>Tempat Lahir: </td>
+        <td><input type="text"/></td>
+    </tr>
+    <tr align="center">
+        <td>Tanggal Lahir: </td>
+        <td><input type="date"/></td>
+    </tr>
+    <tr align="center">
+        <td colspan="3" align="center">
+        <button>REGISTER</button></td>
+    </tr>
+</table></p>
+<p style="font-size: 20px"><font color="black"><b>Tabel Bahan Buku</b></p>
+<table border="1" style="margin-bottom: 50px">
+    <tr>
+        <th>No.</th>
+        <th>Judul Buku</th>
+        <th>Pengarang</th>
+        <th>Penerbit</th>
+        <th>Tahun Terbit</th>
+        <th>Jumlah Halaman</th>
+        <th>ISBN</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>"Berbagai teknik mengupload Web"</td>
+        <td>Jasmadi</td>
+        <td>ANDI Yogyakarta</td>
+        <td>2004</td>
+        <td>132</td>
+        <td>979-731-207-0</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>"Digital numerical relays"</td>
+        <td>Rao, T S Madhava</td>
+        <td>Mayfield Publishing Company</td>
+        <td>2005</td>
+        <td>227</td>
+        <td>0-07-058855-4</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>"The rainbow and women in love"</td>
+        <td>Lawrence, D.H.; Clarko, Colin</td>
+        <td>Maclaren and Sons</td>
+        <td>1969</td>
+        <td>243</td>
+        <td>0-333-04929-2</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>"Mari Bung, Rebut Kembali"</td>
+        <td>Saleh, R.H.A.</td>
+        <td>Pustaka Rihlah</td>
+        <td>2000</td>
+        <td>272</td>
+        <td>979-416-667-7</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>"10 (sepuluh) menit panduan microsoft exchange 5.0"</td>
+        <td>Warner, Scott</td>
+        <td>Elex Media Komputindo</td>
+        <td>1998</td>
+        <td>172</td>
+        <td>979-20-0354-1</td>
+    </tr>
+</table></p>
+<p style="font-size: 20px" style="margin-bottom: 20px"><font color="black"><b>Formulir Pemesanan Buku</b></font></p>
+<p style="margin-bottom: 50px"><table border="1">
+    <tr align="center">
+    </tr>
+    <tr align="center">
+        <td>Nama Lengkap: </td>
+        <td><input type="text"/></td>
+    </tr>
+    <tr align="center">
+        <td>Nomor Anggota Perpustkaan:</td>
+        <td><input type="password"/></td>
+    </tr>
+    <tr align="center">
+        <td>e-mail:</td>
+        <td><input type="email" name="email" placeholder="@gmail.com" /></td>
+    </tr>
+    <tr align="center">
+        <td>Nomor Telepon:</td>
+        <td><input type="number" name="Nomor Telepon" placeholder="+62..." /></td>
+    </tr>
+    <tr align="center">
+        <td>Jenis Kelamin: </td>
+        <td><label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
+            <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label></td>
+    </tr></p>
+    <tr align="center">
+        <th colspan="3" align="center">Detail Pemesanan</th>
+    </tr>
+    <tr align="center">
+        <td>Judul Buku Yang Di Pesan: </td>
+        <td><input type="text" name="Judul Buku"/></td>
+    </tr>
+    <tr align="center">
+        <td>Penulis Buku: </td>
+        <td><input type="text" name="Penulis Buku"/></td>
+    </tr>
+    <tr align="center">
+        <td>Nomor ISBN: </td>
+        <td><input type="number" name="Nomor ISBN"/></td>
+    </tr>
+    <tr align="center">
+        <td>Judul Buku Yang Di Pesan: </td>
+        <td><input type="text" name="Judul Buku"/></td>
+    </tr>
+    <tr align="center">
+        <td>Tanggal Pemesanan: </td>
+        <td><input type="date" name="Tanggal Pemesanan"/></td>
+    </tr>
+    <tr align="center">
+        <td colspan="3" align="center">
+        <input type="submit" name="submit" value="Kirim" /></td>
+    </tr>
+</table></p>
+<p style="font-size: 20px" style="margin-bottom: 20px"><font color="black"><b>Formulir Perpanjangan Peminjaman Buku</b></font></p>
+<p style="margin-bottom: 50px"><table border="1">
+    <tr align="center">
+    </tr>
+    <tr align="center">
+        <td>Nama Lengkap: </td>
+        <td><input type="text"/></td>
+    </tr>
+    <tr align="center">
+        <td>Nomor Anggota Perpustkaan:</td>
+        <td><input type="password"/></td>
+    </tr>
+    <tr align="center">
+        <td>e-mail:</td>
+        <td><input type="email" name="email" placeholder="@gmail.com" /></td>
+    </tr>
+    <tr align="center">
+        <th colspan="3" align="center">Detail Pemesanan Awal</th>
+    </tr>
+    <tr align="center">
+        <td>Judul Buku Yang Di Pesan:</td>
+        <td><input type="text" name="Judul Buku"</td>
+    </tr>
+    <tr align="center">
+        <td>Penulis Buku: </td>
+        <td><input type="text" name="Penulis Buku"/></td>
+    </tr></p>
+    <tr align="center">
+        <td>Nomor ISBN: </td>
+        <td><input type="number" name="Nomor ISBN"/></td>
+    </tr>
+    <tr align="center">
+        <td>Penulis Buku: </td>
+        <td><input type="text" name="Penulis Buku"/></td>
+    </tr>
+    <tr align="center">
+        <td>Nomor ISBN: </td>
+        <td><input type="number" name="Nomor ISBN"/></td>
+    </tr>
+    <tr align="center">
+        <td>Tanggal Peminjaman Buku: </td>
+        <td><input type="date" name="Tanggal Peminjaman Buku"/></td>
+    </tr>
+    <tr align="center">
+        <th colspan="3" align="center">Perpanjangan Peminjaman Buku</th>
+    </tr>
+    <tr align="center">
+        <td>Tanggal Perpanjangan Peminjaman Buku: </td>
+        <td><input type="date" name="Tanggal Perpanjang Peminjaman Buku"/></td>
+    </tr>
+    <tr align="center">
+        <td>Alasan Perpanjangan: </td>
+        <td><input type="text" name="Alasan Perpanjangan"/></td>
+    <tr align="center">
+        <td colspan="3" align="center">
+        <input type="submit" name="submit" value="Kirim" /></td>
+    </tr>
+</table></p>
+    </form>
+<i>putri handayani siregar nim 222201019</i>
+</center></footer>
+</font>
+</center>
+</body>
+</html>
