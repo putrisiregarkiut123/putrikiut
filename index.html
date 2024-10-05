@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <title>Perpustakaan Putri Handayani Siregar</title>
     <style>
-         body {
+        body {
             background-color: #d6eaf8; /* Warna hijau muda */
             color: black; /* Warna teks default */
-            font-family: "Times New Roman, Times, serif; /* Mengatur font menjadi Times New Roman */        }
+            font-family: "Times New Roman", Times, serif; /* Mengatur font menjadi Times New Roman */
+        }
         h1, h2, h3, h4, h6, h7 {
             color: black; /* Warna teks untuk heading */
             font-family: Times New Roman, Times, serif; /* Mengatur font heading */
@@ -47,9 +47,47 @@
             display: block;
             margin: 0 auto; /* Memusatkan iframe */
         }
+        /* tambahkan CSS untuk dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropbtn:hover {
+            background-color: #3e8e41;
+        }
     </style>
-    <body>
-           <!-- Menu dan Dropdown -->
+</head>
+<body>
+    <!-- Menu dan Dropdown -->
     <nav>
         <a href="#">Home</a>
         <a href="#">Tentang Kami</a>
@@ -65,7 +103,6 @@
         </div>
         <a href="#">Kontak</a>
     </nav>
-    
 <h1 style="color:black;"><center><b>PERPUSTAKAAN UNIVERSITAS SYIAH KUALA</center></h1></font></b></h1>
     <h2 style="color:black;"><center><b>Selamat Datang di Perpustakaan Universitas Syiah Kuala</center></h2></font></b></h2> 
 <p class="paragraf-utama" style="color:black;">Perkenalkan, nama saya putri handayani siregar nim 222201019. Saya adalah mahasiswa D3 Perpustakaan Fakultas Vokasi Universitas Sumatera Utara. Berikut adalah
