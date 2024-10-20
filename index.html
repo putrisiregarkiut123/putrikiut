@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Perpustakaan Putri</title>
+</head>
+<style>
+        body {
+            background-color: #d6eaf8; /* Warna hijau muda */
+            color: black; /* Warna teks default */
+            font-family: "Times New Roman", Times, serif; /* Mengatur font menjadi Times New Roman */
+        }
+        h1, h2, h3, h4, h6, h7 {
+            color: black; /* Warna teks untuk heading */
+            font-family: Times New Roman, Times, serif; /* Mengatur font heading */
+        }                   
+        a {
+            color: blue; /* Warna tautan */
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+            font-family: Times New Roman, Times, serif; /* Mengatur font di tabel */
+        }
+        button, input[type="submit"] {
+            background-color: #28a745; /* Warna hijau tombol */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: Times New Roman, Times, serif; /* Mengatur font pada tombol */
+        }
+        button:hover, input[type="submit"]:hover {
+            background-color: #218838; /* Warna hijau tombol saat hover */
+        }
+        img {
+            max-width: 100%; /* Agar gambar tidak melebihi lebar container */
+            height: auto; /* Mempertahankan rasio aspek gambar */
+        }
+        iframe {
+            display: block;
+            margin: 0 auto; /* Memusatkan iframe */
+        }
+        /* tambahkan CSS untuk dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(37, 231, 205, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #1093bb}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        .dropbtn {
+            background-color: #4CAF50;
+            color: rgb(3, 63, 45);
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropbtn:hover {
+            background-color: #3e8e41;
+        }
+    
+
+        body {
+            
+            background-color: #d6eaf8; /* Warna hijau muda */
+            color: black; /* Warna teks default */
+            font-family: "Times New Roman", Times, serif; /* Mengatur font menjadi Times New Roman */
+        }
+        h1, h2, h3, h4, h6, h7 {
+            color: black; /* Warna teks untuk heading */
+            font-family: Times New Roman, Times, serif; /* Mengatur font heading */
+        }
+        a {
+            color: blue; /* Warna tautan */
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+            font-family: Times New Roman, Times, serif; /* Mengatur font di tabel */
+        }
+        button, input[type="submit"] {
+            background-color: #28a745; /* Warna hijau tombol */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: Times New Roman, Times, serif; /* Mengatur font pada tombol */
+        }
+        button:hover, input[type="submit"]:hover {
+            background-color: #218838; /* Warna hijau tombol saat hover */
+        }
+        img {
+            max-width: 100%; /* Agar gambar tidak melebihi lebar container */
+            height: auto; /* Mempertahankan rasio aspek gambar */
+        }
+        iframe {
+            display: block;
+            margin: 0 auto; /* Memusatkan iframe */
+        }
+        /* tambahkan CSS untuk dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: #f1f1f1}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropbtn:hover {
+            background-color: #3e8e41;
+        }
+        @media (min-width: 992px) {
+            .dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+        }
+        .custom-navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 10px 0;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .navbar-nav .nav-link {
+            color: #555;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link:focus {
+            color: #28a745;
+        }
+
+        .navbar-nav .active > .nav-link {
+            color: #28a745;
+        }
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            border-radius: 8px;
+            padding: 0.5rem 0;
+            min-width: 200px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .dropdown-item {
+            padding: 10px 20px;
+            color: #555;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .dropdown-item:hover,
+        .dropdown-item:focus {
+            background-color: #f8f9fa;
+            color: #28a745;
+            padding-left: 25px;
+        }
+
+        .dropdown-item:hover::before {
+            content: '•';
+            position: absolute;
+            left: 10px;
+            color: #28a745;
+        }
+
+        .dropdown-divider {
+            margin: 0.5rem 0;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .form-control {
+            border-radius: 20px;
+            border: 1px solid #ced4da;
+            padding: 0.375rem 1rem;
+        }
+
+        .btn-outline-success {
+            border-radius: 20px;
+            padding: 0.375rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-success:hover {
+            background-color: #28a745;
+            border-color: #28a745;
+            color: #ffffff;
+        }
+
+        @media (min-width: 992px) {
+            .dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-nav {
+                padding-top: 1rem;
+            }
+            .navbar-nav .nav-item {
+                margin-bottom: 0.5rem;
+            }
+            .dropdown-menu {
+                border: none;
+                box-shadow: none;
+                padding-left: 1rem;
+            }
+        }
+    </style>
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">UNSYIAH</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+              </li>
+              
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="tugasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  TUGAS
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="tugasDropdown">
+                  <li><a class="dropdown-item" href="modul1.html">Modul 1</a></li>
+                  <li><a class="dropdown-item" href="modul2.html">Modul 2</a></li>
+                  <li><a class="dropdown-item" href="modul3.html">Modul 3</a></li>
+                  <li><a class="dropdown-item" href="modul4.html">Modul 4</a></li>
+                  <li><a class="dropdown-item" href="modul5.html">Modul 5</a></li>
+                  <li><a class="dropdown-item" href="modul6.html">Modul 6</a></li>
+                  <li><a class="dropdown-item" href="modul7.html">Modul 7</a></li>
+                  <li><a class="dropdown-item" href="modul8.html">Modul 8</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="layananDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  LAYANAN
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="layananDropdown">
+                  <li><a class="dropdown-item" href="formuliranggota.html">Formulir Anggota</a></li>
+                  <li><a class="dropdown-item" href="peminjaman.html">Peminjaman Buku</a></li>
+                  <li><a class="dropdown-item" href="pengembalian.html">Pengembalian Buku</a></li>
+                  <li><a class="dropdown-item" href="perpanjangan.html">Perpanjangan Pengembalian</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <body>
+        <p class="text-gray-600">
+            Welcome To My Website Putri 
+            <style type="text/css">
+               li{color:rgb(18, 18, 20)}
+               li{margin-left: 20px;}
+           </style>
+           <div class="grid grid-cols-2 gap-2 mb-2">
+               <h1 id="welcome">PERPUSTAKAAN UNIVERSITAS SYIAH KUALA</h1>
+               <h-1><img src="https://d3listrik.usk.ac.id/wp-content/uploads/2023/02/UPT_Perpustakaan_Unsyiah.jpg" alt=/></h-1>
+                   <p>Perpustakaan Universitas Syiah Kuala (USK) didirikan pada tahun 1970, pada saat itu masih menggunakan gedung fakultas Ekonomi. Perpustakaan berstatus sebagai Unit Pelayanan Teknis (UPT) pada tahun 1980. Pada tahun 1994 gedung perpustakaan memiliki gedung sendiri yang didirikan berdampingan dengan Kantor Pusat Administrasi (KPA) USK. Sejak April 1994, dengan Surat Keputusan Rektor No. 060 tahun 1994, pendayagunaan UPT Perpustakaan USK ditingkatkan, yaitu dengan menyatukan semua perpustakaan yang ada di lingkungan USK di dalam satu wadah UPT Perpustakaan.Saat ini, terhitung Januari 2022 Perpustakaan Universitas Syiah Kuala memiliki koleksi sebanyak 75.114 judul atau 122.339 eksemplar. Koleksi tersebut tersebar dalam berbagai jenis, meliputi buku teks, terbitan berkala (jurnal), laporan akhir, skripsi, tesis, disertasi, majalah, buku referensi, laporan penelitian, CD-ROM dan dokumentasi. Koleksi pada perpustakaan juga tidak hanya terbatas pada koleksi tercetak saja, namun perpustakaan juga memiliki koleksi yang elektronik, perpustakaan juga telah melanggan e-book dan e-journal pada beberapa penerbit internasional.</p>
+               <h3>VISI:</h3>
+                   <p>Menjadi pusat informasi ilmiah yang menginspirasi dan memotivasi pencapaian visi dan misi Perpustakaan Universitas Siyah Kuala</p>
+   
+                   <div class="grid grid-cols-2 gap-2 mb-2">
+                       <h3>MISI:</h3>
+                       <ol>
+                           <li style="color: rgb(14, 13, 13);margin-left: 20px;">Menjaga Relevansi Koleksi dengan Kebutuhan Pemustaka</li>
+                           <li style="color: rgb(17, 16, 16);margin-left: 20px;">Menciptakan Loyalitas Pemustaka dengan Layanan Prima</li>
+                           <li style="color: rgb(17, 16, 16);margin-left: 20px;">Menumbuhakan motivasi dan inspirasi pemustaka untuk berinovasi dan berkreatifitas dengan fasilitas dan kegiatan dalam bidang literasi informasi</li>
+                           <li style="color: rgb(17, 16, 16);margin-left: 20px;">Mengembangkan repository lokal konten yang open akses</li>
+                           <li style="color: rgb(17, 16, 16);margin-left: 20px;">Mengembangkan kompetensi sumber daya manusia yang bersertifikasi</li>
+                           <li style="color: rgb(17, 16, 16);margin-left: 20px;">MMengembangkan aplikasi teknologi informasi perpustakaan sesuai standar</li>
+                           <li style="color: rgb(17, 16, 16);margin-left: 20px;">Tata kelola manajemen perpustakaa sesuai standar menjalin kerjasama dengan institusi lain dalam pengembangan layanan dan operasional perpustakaan serta tanggung jawab sosial kepada masyarakat dalam bidang literasi informasi</li>
+                       </ol>
+                   </div>
+               </div>
+           </p>
+           <p><h-6 style="color:black;"><center>Berikut adalah Video Profil Perpustakaan Universitas Syiah Kuala</center></h6></p>
+           
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/ZufYAQL9HOo?si=Vaw3iOjLWFdKTDmH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+           
+           <p style="margin-bottom: 50px">
+               
+           <p><h-7 style="color:black;"><center> Berikut adalah lagu Di akhir Perang-Nadin Amizah</center></h-7></p>
+           <center><audio controls>
+           <source src="music/Nadin Amizah - Di Akhir Perang (Official Music Video).mp3" alt="audio/mpeg">
+           </audio></center>
+      </body>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            padding: 30px 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin: 0 0 40px 0;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .slider-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            padding: 30px 0;
+            background: linear-gradient(45deg, #3498db, #8e44ad);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            padding: 20px;
+        }
+
+        .book {
+            min-width: calc(25% - 40px);
+            margin: 0 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .book img {
+            width: 150px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .book:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .book h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        .book p {
+            color: #7f8c8d;
+            margin: 5px 0;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(44, 62, 80, 0.7);
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgb(33, 124, 216);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="text-align: center;">Daftar Buku Perpustakaan</h1>
+
+<div class="slider-container">
+    <div class="slider" id="bookSlider">
+        <div class="book">
+            <img src="data:image/jpeg;base64,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" alt="Pemrograman Web">
+            <h3>Buku 1</h3>
+            <p>Judul: Pemrograman Web</p>
+            <p>Pengarang: John Doe</p>
+        </div>
+        <div class="book">
+            <img src="https://cdn.gramedia.com/uploads/items/9786024462284_Dasar-Dasar-p.jpg" alt="Dasar-Dasar Pemrograman Java">
+            <h3>Buku 2</h3>
+            <p>Judul: Dasar-Dasar Pemrograman Java</p>
+            <p>Pengarang: Yuni Sugiarti</p>
+        </div>
+        <div class="book">
+            <img src="https://elibrary.bsi.ac.id/assets/images/buku/200605.jpg" alt="Pengantar Basis Data">
+            <h3>Buku 3</h3>
+            <p>Judul: Pengantar Basis Data</p>
+            <p>Pengarang: Fathansyah</p>
+        </div>
+        <div class="book">
+            <img src="https://elibrary.bsi.ac.id/assets/images/buku/201270.jpeg" alt="Algoritma & Struktur Data">
+            <h3>Buku 4</h3>
+            <p>Judul: Algoritma & Struktur Data</p>
+            <p>Pengarang: Indra Yatini .B  Erliansya Nasution</p>
+        </div>
+        <div class="book">
+            <img src="https://pustaka.ut.ac.id/lib/wp-content/uploads/2020/07/MSIM4201.jpg" alt="Sistem Operasi">
+            <h3>Buku 5</h3>
+            <p>Judul: Sistem Operasi</p>
+            <p>Pengarang: Sonasa Rinusantoro</p>
+        </div>
+        <div class="book">
+            <img src="https://image.gramedia.net/rs:fit:0:0/plain/https://cdn.gramedia.com/uploads/items/Machine_Learning_Untuk_Pemula.jpg" alt="Machine Learning">
+            <h3>Buku 6</h3>
+            <p>Judul: Machine Learning</p>
+            <p>Pengarang: Irwansyah Saputra & Dinar Ajeng Kristiyanti</p>
+        </div>
+    </div>
+    <!-- Tombol geser kiri/kanan -->
+    <button class="prev" onclick="slideLeft()">&#10094;</button>
+    <button class="next" onclick="slideRight()">&#10095;</button>
+</div>
+
+<script>
+    let slider = document.getElementById('bookSlider');
+    let scrollAmount = 0;
+    let bookWidth = slider.querySelector('.book').offsetWidth;
+
+    function slideRight() {
+        const maxScroll = slider.scrollWidth - slider.clientWidth;
+        if (scrollAmount < maxScroll) {
+            scrollAmount += bookWidth + 20; // 20 adalah margin
+            if (scrollAmount > maxScroll) scrollAmount = maxScroll;
+            slider.style.transform = `translateX(-${scrollAmount}px)`;
+        }
+    }
+
+    function slideLeft() {
+        if (scrollAmount > 0) {
+            scrollAmount -= bookWidth + 20; // 20 adalah margin
+            if (scrollAmount < 0) scrollAmount = 0;
+            slider.style.transform = `translateX(-${scrollAmount}px)`;
+        }
+    }
+</script>
+
+
+<script src="main.js"></script>
+</body>
+</html>
